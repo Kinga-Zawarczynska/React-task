@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
-import {fetchAll} from './services/fetchData'
+import {fetchAllData} from './services/fetchData'
+import Image from './components/Image'
 
 function App() {
+
+  useEffect(() => {fetchAllData()}, [])
+
+  
   return (
-    <div className="App" onClick={()=> fetchAll()}>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello there, i'm Kinga
-        </a>
-      </header>
+    <div className="App">
+      
+      <Image/>
     </div>
   );
 }
