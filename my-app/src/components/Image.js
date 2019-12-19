@@ -19,12 +19,13 @@ class Image extends React.Component {
         fetchAllData()
         .then(data => {
             const creditLink = data.elements.mainImage.value;
+            const webLInk = creditLink.leadImageCredit.value;
             const imgLink = creditLink.leadImage.renditions
             this.setState({
-                urlDefault: `${creditLink.leadImageCredit.value}${imgLink.default.url}`,
-                urlLead: `${creditLink.leadImageCredit.value}${imgLink.lead.url}`,
-                urlCard: `${creditLink.leadImageCredit.value}${imgLink.card.url}`,
-                credit: `${creditLink.leadImageCredit.value}`,
+                urlDefault: `${webLInk}${imgLink.default.url}`,
+                urlLead: `${webLInk}${imgLink.lead.url}`,
+                urlCard: `${webLInk}${imgLink.card.url}`,
+                credit: `${webLInk}`,
                 caption: `${creditLink.leadImageCaption.value}`
                 
             })
