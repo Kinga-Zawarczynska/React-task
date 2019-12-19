@@ -5,7 +5,7 @@ import { fetchAllData } from '../services/fetchData';
 class Article extends React.Component {
 
     state = {
-        data: {}
+        data: null
     }
 
     componentDidMount() {
@@ -21,20 +21,21 @@ class Article extends React.Component {
     render(
     ) {
         const readyData = this.state.data
-        console.log(this.state.data)
-        if ({ readyData } !== {}) {
+        if ( readyData  !== null){
             
             return (
+                
                
                 <div>
                     <article>
                         <button onClick={() => console.log(this.state.data.elements)}>HEJ</button>
 
-                        <p>{this.state.data.elements.mainImage.value.leadImageCaption.value}</p>
+                        <p>{this.state.data.thumbnail.id}</p>
                     </article>
                 </div>)
-        } else {
-            throw Error('halo')
+        } 
+        else {
+            return <p>Wait for your data!</p>
         }
     }
 }
