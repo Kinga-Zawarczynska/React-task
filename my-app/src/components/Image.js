@@ -1,5 +1,6 @@
 import React from 'react';
 import { fetchAllData } from '../services/fetchData';
+import styles from './Image.module.css'
 
 
 class Image extends React.Component {
@@ -29,9 +30,10 @@ class Image extends React.Component {
     ){return (
         <div>
             <img 
-            srcSet={`${this.state.thumbnail} 500w, ${this.state.url} 800w `}
-            sizes="(max-width: 600px) 500px, 800px"
-            src={this.state.url} alt={this.state.caption}/>
+            srcSet={`${this.state.thumbnail} 400w, ${this.state.url} 800w `}
+            sizes="(max-width: 600px) 400px, 800px"
+            src={this.state.url} alt={this.state.caption}
+            className="mainImg"/>
             <p>Credits to: {this.state.credit}</p>
             
         </div>
