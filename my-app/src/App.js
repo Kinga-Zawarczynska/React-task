@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import {fetchAllData} from './services/fetchData'
-import Image from './components/Image'
+
+// import Image from './components/Image'
+import Article from './components/Article';
 
 function App() {
 
-  useEffect(() => {fetchAllData()}, [])
+
+  
 
   
   return (
     <div className="App">
       
-      <Image/>
+      {/* <Image/> */}
+      <Article/>
     </div>
   );
 }
