@@ -1,4 +1,30 @@
 .mainImg{
-    margin: 30px;
+    margin: 30px 0;
+    display: block;
 
+}
+
+.articleTitle{
+    margin: 5% 7%;
+}
+
+.topPage{
+    display: flex;
+    margin: 2% 7%;
+}
+
+.pictureDisplay{
+    display: flex;
+    flex-direction: column
+}
+
+.picDescription{
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.picDescription p{
+    font-size: 12px;
+    display: inline;
+    
 }
