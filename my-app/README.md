@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 First make sure to run the command `npm install`,
-if error occured, try running: `npm install react-html-parser`,
+if error occured, try running: `npm install react-html-parser` and `npm install --save prop-types`
 then you can try what's below.
 
 ## Available Scripts
