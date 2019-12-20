@@ -36,10 +36,6 @@
     width: 95%;
 }
 
-.pictureDisplay{
-    display: flex;
-    flex-direction: column
-}
 
 .picDescription{
     

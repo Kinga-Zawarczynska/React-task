@@ -2,6 +2,7 @@ import * as React from 'react';
 import { fetchAllData } from '../services/fetchData';
 import styles from './Article.module.css';
 import ReactHtmlParser from 'react-html-parser';
+import Image from './Image'
 
 
 
@@ -18,7 +19,7 @@ class Article extends React.Component {
             .then(data => {
                 this.setState({
                     data: data
-                    
+
                 })
             })
             .catch((error) => new Error('Something went wrong!'))
@@ -43,24 +44,19 @@ class Article extends React.Component {
                     <article className={styles.article}>
                         <div className={styles.date}>Created at: {displayDate}</div>
                         <div className={styles.topPage}>
-                            <div className={styles.pictureDisplay}>
-                        <img
-                            srcSet={`${apiUrl}${imgLink.card.url} 250w, ${apiUrl}${imgLink.lead.url} 400w, ${apiUrl}${imgLink.default.url} 600w`}
-                            sizes="(max-width: 500px) 100px,(max-width: 1200px) 150px, (max-width: 1600px) 200px, 300px"
-                            src={this.state.url} alt="Smiley Staffordshire Terrier Dog playing in the garden"
-                            className={styles.mainImg} 
+                            <div className={styles.articleTitle}>
+                                <h1>{readyData.name}</h1>
+                                <p>by {readyData.elements.author.value}</p>
+                            </div>
+
+
+                            <Image
+                                srcSet={`${apiUrl}${imgLink.card.url} 250w, ${apiUrl}${imgLink.lead.url} 400w, ${apiUrl}${imgLink.default.url} 600w`}
+                                sizes="(max-width: 500px) 100px,(max-width: 1200px) 150px, (max-width: 1600px) 200px, 300px"
+                                src={this.state.url} alt="Smiley Staffordshire Terrier Dog playing in the garden"
+                                caption={creditLink.leadImageCaption.value}
+                                webLink={webLink}
                             />
-                            <div className={styles.picDescription}>
-                            <p>{creditLink.leadImageCaption.value}</p>
-                            <p>Credits to: <a href="https://www.depositphotos.com" target="blank">{webLink}</a></p>
-                            
-                        </div>
-                        </div>
-                        <div className={styles.articleTitle}>
-                             <h1>{readyData.name}</h1>
-                             <p>by {readyData.elements.author.value}</p>
-                             
-                             </div>
                         </div>
                         <div className={styles.articleBodyDisplay}>{ReactHtmlParser(articleBodyDisplay)}</div>
                     </article>
