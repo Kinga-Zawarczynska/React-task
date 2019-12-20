@@ -1,5 +1,5 @@
 .article{
-    margin: 7% 15%;
+    margin: 7% 10%;
 }
 
 .date{
@@ -7,13 +7,13 @@
 }
 
 .mainImg{
-    margin: 30px 0;
+    margin: 30px 0 0;
     display: block;
 
 }
 
 .articleTitle{
-    margin: 0% 10%;
+
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,9 @@
     
 }
 .articleTitle h1{
-    font-size: 28px;  
+    font-size: 28px; 
+    margin: 0 auto;
+    padding: 15% 0 0;
 }
 .articleTitle p{
     font-size: 12px;  
@@ -32,7 +34,7 @@
 .topPage{
     display: flex;
     margin: 2% 4%;
-    width: 80%;
+    width: 95%;
 }
 
 .pictureDisplay{
@@ -49,6 +51,7 @@
 .picDescription p{
     font-size: 12px;
     display: inline;
+    margin: 0 3% 3%;
     
 }
 
