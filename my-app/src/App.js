@@ -6,14 +6,8 @@ import Article from './components/Article';
 
 function App() {
 
-
-  
-
-  
   return (
     <div className="App">
-      
-      {/* <Image/> */}
       <Article/>
     </div>
   );
