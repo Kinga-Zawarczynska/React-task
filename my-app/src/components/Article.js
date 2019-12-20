@@ -2,7 +2,8 @@ import * as React from 'react';
 import { fetchAllData } from '../services/fetchData';
 import styles from './Article.module.css';
 import ReactHtmlParser from 'react-html-parser';
-import Image from './Image'
+import Image from './Image';
+import PropTypes from 'prop-types';
 
 
 
@@ -66,5 +67,9 @@ class Article extends React.Component {
         }
     }
 }
+
+Article.propTypes = {
+    Image: PropTypes.element
+  };
 
 export default Article;
