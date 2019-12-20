@@ -19,7 +19,6 @@ class Article extends React.Component {
             .then(data => {
                 this.setState({
                     data: data
-
                 })
             })
             .catch((error) => new Error('Something went wrong!'))
@@ -37,7 +36,7 @@ class Article extends React.Component {
             const imgLink = creditLink.leadImage.renditions
             const createdAt = new Date(`${readyData.created}`).getTime()
             const displayDate = new Date(createdAt).toLocaleDateString()
-            let articleBodyDisplay = this.state.data.elements.body.values.join(" ")
+            let articleBodyDisplay = readyData.elements.body.values.join(" ")
 
             return (
                 <div>
@@ -48,8 +47,6 @@ class Article extends React.Component {
                                 <h1>{readyData.name}</h1>
                                 <p>by {readyData.elements.author.value}</p>
                             </div>
-
-
                             <Image
                                 srcSet={`${apiUrl}${imgLink.card.url} 250w, ${apiUrl}${imgLink.lead.url} 400w, ${apiUrl}${imgLink.default.url} 600w`}
                                 sizes="(max-width: 500px) 100px,(max-width: 1200px) 150px, (max-width: 1600px) 200px, 300px"
