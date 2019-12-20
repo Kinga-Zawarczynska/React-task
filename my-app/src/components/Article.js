@@ -58,11 +58,10 @@ class Article extends React.Component {
                         <div className={styles.articleTitle}>
                              <h1>{readyData.name}</h1>
                              <p>by {readyData.elements.author.value}</p>
+                             
                              </div>
                         </div>
-
                         <div className={styles.articleBodyDisplay}>{ReactHtmlParser(articleBodyDisplay)}</div>
-                        
                     </article>
                 </div>)
         }
