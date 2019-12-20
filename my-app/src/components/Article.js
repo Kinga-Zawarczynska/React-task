@@ -1,6 +1,8 @@
 import React from 'react';
 import { fetchAllData } from '../services/fetchData';
-import styles from './Image.module.css'
+import styles from './Image.module.css';
+import ReactHtmlParser from 'react-html-parser';
+
 
 
 
@@ -17,8 +19,14 @@ class Article extends React.Component {
                 this.setState({
                     data: data
                 })
-            }).then(state => console.log(this.state.data))
+            }).then(data => {
+                })
             .catch((error) => new Error('Something went wrong!'))
+    }
+
+    articleBodyDisplay() {
+        this.state.data.elements.body.values.toString()
+
     }
 
     render(
@@ -30,14 +38,14 @@ class Article extends React.Component {
             const creditLink = this.state.data.elements.mainImage.value;
             const webLink = creditLink.leadImageCredit.value;
             const imgLink = creditLink.leadImage.renditions
+            const createdAt = new Date(`${readyData.created}`).getTime()
+            const displayDate = new Date(createdAt).toLocaleDateString()
+            let articleBodyDisplay = this.state.data.elements.body.values.join(" ")
 
             return (
-
-
                 <div>
-                    <article>
-
-
+                    <article className={styles.article}>
+                        <div className={styles.date}>Created at: {displayDate}</div>
                         <div className={styles.topPage}>
                             <div className={styles.pictureDisplay}>
                         <img
@@ -51,9 +59,12 @@ class Article extends React.Component {
                         </div>
                         </div>
                         <div className={styles.articleTitle}>
-                             <h1>{this.state.data.name}</h1>
+                             <h1>{readyData.name}</h1>
+                             <p>by {readyData.elements.author.value}</p>
                              </div>
                         </div>
+
+                        <div className={styles.articleBodyDisplay}>{ReactHtmlParser(articleBodyDisplay)}</div>
                         
                         
                         
