@@ -48,8 +48,9 @@ class Article extends React.Component {
                             src={this.state.url} alt="Smiley Staffordshire Terrier Dog playing in the garden"
                             className={styles.mainImg} />
                             <div className={styles.picDescription}>
-                            <p>Credits to: {webLink}</p>
                             <p>{creditLink.leadImageCaption.value}</p>
+                            <p>Credits to: {webLink}</p>
+                            
                         </div>
                         </div>
                         <div className={styles.articleTitle}>
