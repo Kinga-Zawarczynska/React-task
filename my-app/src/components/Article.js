@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { fetchAllData } from '../services/fetchData';
 import styles from './Article.module.css';
 import ReactHtmlParser from 'react-html-parser';
