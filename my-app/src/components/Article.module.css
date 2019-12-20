@@ -13,8 +13,12 @@
 }
 
 .articleTitle{
-    margin: 0% 7%;
+    margin: 0% 10%;
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
    
     
 }
