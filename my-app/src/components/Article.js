@@ -18,6 +18,7 @@ class Article extends React.Component {
             .then(data => {
                 this.setState({
                     data: data
+                    
                 })
             })
             .catch((error) => new Error('Something went wrong!'))
@@ -29,6 +30,7 @@ class Article extends React.Component {
 
         if (readyData !== null) {
 
+            const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
             const creditLink = this.state.data.elements.mainImage.value;
             const webLink = creditLink.leadImageCredit.value;
             const imgLink = creditLink.leadImage.renditions
@@ -43,8 +45,8 @@ class Article extends React.Component {
                         <div className={styles.topPage}>
                             <div className={styles.pictureDisplay}>
                         <img
-                            srcSet={`${webLink}${imgLink.card.url} 640w, ${webLink}${imgLink.lead.url} 1200w, ${webLink}${imgLink.default.url} 1600w`}
-                            sizes="(max-width: 1200px) 640px, (max-width: 1600px) 1200px, 1600px"
+                            srcSet={`${apiUrl}${imgLink.card.url} 250w, ${apiUrl}${imgLink.lead.url} 400w, ${apiUrl}${imgLink.default.url} 800w`}
+                            sizes="(max-width: 500px) 100px,(max-width: 1200px) 250px, (max-width: 1600px) 400px, 800px"
                             src={this.state.url} alt="Smiley Staffordshire Terrier Dog playing in the garden"
                             className={styles.mainImg} />
                             <div className={styles.picDescription}>
