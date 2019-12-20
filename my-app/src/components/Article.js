@@ -19,8 +19,7 @@ class Article extends React.Component {
                 this.setState({
                     data: data
                 })
-            }).then(data => {
-                })
+            })
             .catch((error) => new Error('Something went wrong!'))
     }
 
