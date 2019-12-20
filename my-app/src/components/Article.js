@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchAllData } from '../services/fetchData';
-import styles from './Image.module.css';
+import styles from './Article.module.css';
 import ReactHtmlParser from 'react-html-parser';
 
 
@@ -60,15 +60,6 @@ class Article extends React.Component {
 
                         <div className={styles.articleBodyDisplay}>{ReactHtmlParser(articleBodyDisplay)}</div>
                         
-                        
-                        
-
-
-
-                       
-
-
-
                     </article>
                 </div>)
         }
