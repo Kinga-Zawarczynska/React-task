@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 import styles from './Article.module.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 class Image extends React.Component {
    static defaultProps = {

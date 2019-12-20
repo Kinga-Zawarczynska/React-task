@@ -27,17 +27,17 @@ class Article extends React.Component {
 
     render(
     ) {
-        const readyData = this.state.data
+        const readyData = this.state.data;
 
         if (readyData !== null) {
 
             const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
             const creditLink = this.state.data.elements.mainImage.value;
             const webLink = creditLink.leadImageCredit.value;
-            const imgLink = creditLink.leadImage.renditions
-            const createdAt = new Date(`${readyData.created}`).getTime()
-            const displayDate = new Date(createdAt).toLocaleDateString()
-            let articleBodyDisplay = readyData.elements.body.values.join(" ")
+            const imgLink = creditLink.leadImage.renditions;
+            const createdAt = new Date(`${readyData.created}`).getTime();
+            const displayDate = new Date(createdAt).toLocaleDateString();
+            let articleBodyDisplay = readyData.elements.body.values.join(" ");
 
             return (
                 <div>
