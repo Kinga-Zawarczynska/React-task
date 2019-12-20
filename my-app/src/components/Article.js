@@ -23,11 +23,6 @@ class Article extends React.Component {
             .catch((error) => new Error('Something went wrong!'))
     }
 
-    articleBodyDisplay() {
-        this.state.data.elements.body.values.toString()
-
-    }
-
     render(
     ) {
         const readyData = this.state.data
