@@ -51,7 +51,7 @@ class Article extends React.Component {
                             className={styles.mainImg} />
                             <div className={styles.picDescription}>
                             <p>{creditLink.leadImageCaption.value}</p>
-                            <p>Credits to: {webLink}</p>
+                            <p>Credits to: <a href="https://www.depositphotos.com" target="blank">{webLink}</a></p>
                             
                         </div>
                         </div>
