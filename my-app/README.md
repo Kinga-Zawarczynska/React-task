@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+First make sure to run the command `npm install`,
+if error occured, try running: `npm install react-html-parser`,
+then you can try what's below.
+
 ## Available Scripts
 
 In the project directory, you can run:
