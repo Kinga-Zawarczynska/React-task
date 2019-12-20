@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Project is based on React, uses also react-html-parser and prop-types packages.
+
 
 First make sure to run the command `npm install`,
 if error occured, try running: `npm install react-html-parser` and `npm install --save prop-types`
