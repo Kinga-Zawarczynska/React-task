@@ -49,8 +49,8 @@ class Article extends React.Component {
                                 <p>by {readyData.elements.author.value}</p>
                             </div>
                             <Image
-                                srcSet={`${apiUrl}${imgLink.card.url} 250w, ${apiUrl}${imgLink.lead.url} 400w, ${apiUrl}${imgLink.default.url} 600w`}
-                                sizes="(max-width: 500px) 100px,(max-width: 1200px) 150px, (max-width: 1600px) 200px, 300px"
+                                srcSet={`${apiUrl}${imgLink.card.url} 400w, ${apiUrl}${imgLink.lead.url} 600w, ${apiUrl}${imgLink.default.url} 800w`}
+                                sizes="(max-width: 500px) 150px,(max-width: 950px) 180px, (max-width: 1500px) 300px, (max-width: 1850px) 400px, 500px"
                                 src={this.state.url} alt="Smiley Staffordshire Terrier Dog playing in the garden"
                                 caption={creditLink.leadImageCaption.value}
                                 webLink={webLink}
