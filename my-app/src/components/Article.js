@@ -62,7 +62,7 @@ class Article extends React.Component {
         }
         else {
             return (
-                <p>Wait, we're preparing your article!</p>
+                <p className={styles.loader}>Wait, we're preparing your article!</p>
             )
         }
     }
