@@ -4,14 +4,13 @@
 
 .date{
     float: right;
-    font-size: 22px; /**/
+    font-size: 22px;
 }
 
 .mainImg{
     margin: 30px 0 0 20px;
     display: block;
     box-shadow: 1px 4px 20px grey;
-
 }
 
 .articleTitle{
@@ -21,11 +20,11 @@
     justify-content: center; 
 }
 .articleTitle h1{
-    font-size: 46px; /**/
+    font-size: 46px;
     margin: 0 auto; 
 }
 .articleTitle p{
-    font-size: 24px;  /**/
+    font-size: 24px;
 }
 
 .topPage{
@@ -36,108 +35,105 @@
 
 
 .picDescription{
-    
     display: flex;
     justify-content: space-around;
-    
 }
 .picDescription p{
-    font-size: 18px; /**/
+    font-size: 18px;
     margin:  3% 3%;
-    
 }
 
 .articleBodyDisplay{
-    font-size: 24px; /**/
-    margin: 0 3%; /**/
+    font-size: 24px; 
+    margin: 0 3%; 
 }
 
 @media (max-width: 1300px){
     .date{
-        font-size: 16px; /**/
+        font-size: 16px; 
     }
 
     .articleTitle h1{
-        font-size: 38px; /**/
+        font-size: 38px; 
     }
     .articleTitle p{
-        font-size: 20px;  /**/
+        font-size: 20px;  
     }
 
     .picDescription p{
-        font-size: 14px; /**/
+        font-size: 14px; 
     }
     
     .articleBodyDisplay{
-        font-size: 16px; /**/
+        font-size: 16px; 
     }
 
 }
 
 @media (max-width: 1100px){
     .date{
-        font-size: 14px; /**/
+        font-size: 14px; 
     }
 
     .articleTitle h1{
-        font-size: 32px; /**/
+        font-size: 32px; 
     }
     .articleTitle p{
-        font-size: 18px;  /**/
+        font-size: 18px; 
     }
 
     .picDescription p{
-        font-size: 12px; /**/
+        font-size: 12px;
     }
     
     .articleBodyDisplay{
-        font-size: 14px; /**/
-        margin: 0 4%; /**/
+        font-size: 14px;
+        margin: 0 4%;
     }
 
 }
 
 @media (max-width: 800px){
     .date{
-        font-size: 12px; /**/
+        font-size: 12px;
     }
 
     .articleTitle h1{
-        font-size: 26px; /**/
+        font-size: 26px;
     }
     .articleTitle p{
-        font-size: 14px;  /**/
+        font-size: 14px;
     }
 
     .picDescription p{
-        font-size: 10px; /**/
+        font-size: 10px; 
     }
     
     .articleBodyDisplay{
-        font-size: 12px; /**/
+        font-size: 12px;
     }
 
 }
 
 @media (max-width: 450px){
     .date{
-        font-size: 10px; /**/
+        font-size: 10px;
     }
 
     .articleTitle h1{
-        font-size: 18px; /**/
+        font-size: 18px;
         margin-top: 3%;
     }
     .articleTitle p{
-        font-size: 12px;  /**/
+        font-size: 12px;
     }
 
     .picDescription p{
-        font-size: 8px; /**/
+        font-size: 8px;
     }
     
     .articleBodyDisplay{
-        font-size: 10px; /**/
+        font-size: 10px;
         margin: 0 5%;
     }
 
@@ -148,7 +144,6 @@
     }
     .mainImg{
         margin: 0 0;
-    
     }
 
 }
