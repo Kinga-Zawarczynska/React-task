@@ -44,7 +44,7 @@ class Article extends React.Component {
             const imgLink = creditLink.leadImage.renditions;
             const createdAt = new Date(`${readyData.created}`).getTime();
             const displayDate = new Date(createdAt).toLocaleDateString();
-            let articleBodyDisplay = readyData.elements.body.values.join(" ");
+            const articleBodyDisplay = readyData.elements.body.values.join(" ");
 
             return (
                 <div>
