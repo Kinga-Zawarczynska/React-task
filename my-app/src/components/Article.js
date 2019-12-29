@@ -14,19 +14,26 @@ class Article extends React.Component {
     }
 
     static getDerivedStateFromError(error) {
-       this.setState(
-           {hasError: true}
-           )
-      }
+        this.setState(
+            { hasError: true }
+        )
+    }
 
     componentDidMount() {
-        fetchAllData()
-            .then(data => {
-                this.setState({
-                    data: data
+        try {
+            fetchAllData()
+                .then(data => {
+                    this.setState({
+                        data: data
+                    })
                 })
+
+        }
+        catch(error) {
+            this.setState({
+                data: <p>There is no article like that</p>
             })
-            .catch((error) => <p>Something went wrong!</p>)
+        }
     }
 
     render(
@@ -35,7 +42,7 @@ class Article extends React.Component {
 
         if (this.state.hasError) {
             return <h1>Something went wrong!</h1>;
-          }
+        }
         else if (readyData !== null && !this.state.hasError) {
 
             const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
@@ -77,6 +84,6 @@ class Article extends React.Component {
 
 Article.propTypes = {
     Image: PropTypes.element
-  };
+};
 
 export default Article;

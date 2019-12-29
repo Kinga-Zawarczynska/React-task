@@ -9,5 +9,5 @@ export const fetchAllData = () => {
             return {hasError: true}
         }
     })
-    .catch(error => {hasError: true})
+    .catch(error => error)
 }
