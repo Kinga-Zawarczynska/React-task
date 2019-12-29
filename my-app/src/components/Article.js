@@ -39,7 +39,6 @@ class Article extends React.Component {
     render(
     ) {
         const readyData = this.state.data;
-        console.log(this.state.hasError)
         if (this.state.hasError) {
             return <h1>Something went wrong!</h1>;
             
@@ -47,7 +46,7 @@ class Article extends React.Component {
         else if (readyData !== null && !this.state.hasError) {
 
             const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
-            const creditLink = this.state.data.elements.mainImage.value;
+            const creditLink = readyData.elements.mainImage.value;
             const webLink = creditLink.leadImageCredit.value;
             const imgLink = creditLink.leadImage.renditions;
             const createdAt = new Date(`${readyData.created}`).getTime();
