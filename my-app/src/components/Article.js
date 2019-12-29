@@ -15,8 +15,7 @@ class Article extends React.Component {
 
     static getDerivedStateFromError(error) {
        this.setState(
-           {hasError: true,
-            message: error}
+           {hasError: true}
            )
       }
 
