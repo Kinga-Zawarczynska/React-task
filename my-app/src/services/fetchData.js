@@ -5,9 +5,7 @@ export const fetchAllData = () => {
     .then(response => {
         if (response.ok) {
             return response.json();
-        } else{
-            return {hasError: true}
-        }
+        } 
     })
     .catch(error => error)
 }

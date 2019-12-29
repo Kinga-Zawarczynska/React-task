@@ -27,10 +27,10 @@ class Article extends React.Component {
                         data: data
                     })
                 })
-
         }
         catch(error) {
             this.setState({
+                hasError: true,
                 data: <p>There is no article like that</p>
             })
         }
@@ -39,9 +39,10 @@ class Article extends React.Component {
     render(
     ) {
         const readyData = this.state.data;
-
+        console.log(this.state.hasError)
         if (this.state.hasError) {
             return <h1>Something went wrong!</h1>;
+            
         }
         else if (readyData !== null && !this.state.hasError) {
 
