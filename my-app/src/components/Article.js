@@ -38,7 +38,7 @@ class Article extends React.Component {
         const readyData = this.state.data;
 
         if (this.state.hasError) {
-            return <h1>Something went wrong.</h1>;
+            return <h1>Something went wrong!</h1>;
           }
         else if (readyData !== null && !this.state.hasError) {
 
