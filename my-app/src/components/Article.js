@@ -11,9 +11,14 @@ import PropTypes from 'prop-types';
 class Article extends React.Component {
 
     state = {
+        hasError: false,
         data: null,
         url: 'https://st2.depositphotos.com/1035449/6191/v/950/depositphotos_61915173-stock-illustration-vector-sketch-dog-staffordshire-bull.jpg'
     }
+
+    static getDerivedStateFromError(error) {
+        return { hasError: true };
+      }
 
     componentDidMount() {
         fetchAllData()
@@ -29,7 +34,10 @@ class Article extends React.Component {
     ) {
         const readyData = this.state.data;
 
-        if (readyData !== null) {
+        if (this.state.hasError) {
+            return <h1>Something went wrong.</h1>;
+          }
+        else if (readyData !== null && !this.state.hasError) {
 
             const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
             const creditLink = this.state.data.elements.mainImage.value;

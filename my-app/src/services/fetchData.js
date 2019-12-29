@@ -6,7 +6,7 @@ export const fetchAllData = () => {
         if (response.ok) {
             return response.json();
         } else{
-            throw new Error('There is no article here')
+            return {hasError: true}
         }
     })
     .catch(error => `<p>${error}</p>`)
