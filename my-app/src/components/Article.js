@@ -5,9 +5,6 @@ import ReactHtmlParser from 'react-html-parser';
 import Image from './Image';
 import PropTypes from 'prop-types';
 
-
-
-
 class Article extends React.Component {
 
     state = {
