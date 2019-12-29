@@ -17,7 +17,10 @@ class Article extends React.Component {
     }
 
     static getDerivedStateFromError(error) {
-        return { hasError: true };
+       this.setState(
+           {hasError: true,
+            message: error}
+           )
       }
 
     componentDidMount() {
@@ -27,7 +30,7 @@ class Article extends React.Component {
                     data: data
                 })
             })
-            .catch((error) => new Error('Something went wrong!'))
+            .catch((error) => <p>Something went wrong!</p>)
     }
 
     render(
