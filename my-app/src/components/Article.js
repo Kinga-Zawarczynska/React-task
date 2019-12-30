@@ -25,7 +25,7 @@ class Article extends React.Component {
     render(
     ) {
         const readyData = this.state.data;
-        if (readyData !== null && !this.state.hasError) {
+        if (readyData !== null) {
 
             const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
             const creditLink = readyData.elements.mainImage.value;
