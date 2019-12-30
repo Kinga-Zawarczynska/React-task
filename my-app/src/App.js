@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
-
-// import Image from './components/Image'
 import Article from './components/Article';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
 
   return (
     <div className="App">
+      <ErrorBoundary>
       <Article/>
+      </ErrorBoundary>
     </div>
   );
 }
