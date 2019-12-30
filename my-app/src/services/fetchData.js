@@ -7,4 +7,7 @@ export const fetchAllData = () => {
             return response.json();
         }
     })
+    .catch(error => error)
+
+    
 }
