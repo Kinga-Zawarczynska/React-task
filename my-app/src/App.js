@@ -4,7 +4,6 @@ import Article from './components/Article';
 import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
-
   return (
     <div className="App">
       <ErrorBoundary>
