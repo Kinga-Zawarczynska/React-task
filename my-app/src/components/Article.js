@@ -12,7 +12,6 @@ class Article extends React.Component {
         url: 'https://st2.depositphotos.com/1035449/6191/v/950/depositphotos_61915173-stock-illustration-vector-sketch-dog-staffordshire-bull.jpg'
     }
 
-
     componentDidMount() {
         fetchAllData()
             .then(data => {
@@ -26,7 +25,6 @@ class Article extends React.Component {
     ) {
         const readyData = this.state.data;
         if (readyData !== null) {
-
             const apiUrl = 'https://my12.digitalexperience.ibm.com/859f2008-a40a-4b92-afd0-24bb44d10124';
             const creditLink = readyData.elements.mainImage.value;
             const webLink = creditLink.leadImageCredit.value;
